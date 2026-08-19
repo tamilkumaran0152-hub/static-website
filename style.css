@@ -1,0 +1,1477 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --bg: #020617;
+    --panel: #0f172a;
+    --panel2: #111827;
+
+    --border: #1e293b;
+
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+
+    --blue: #38bdf8;
+    --blue2: #2563eb;
+
+    --green: #22c55e;
+
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(circle at 50% -20%,
+            #172554,
+            transparent 50%),
+
+        var(--bg);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 6%;
+
+    border-bottom:
+        1px solid var(--border);
+
+    background:
+        rgba(2, 6, 23, .8);
+
+    backdrop-filter:
+        blur(15px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    font-weight: 700;
+
+}
+
+
+.linux-icon {
+
+    font-size: 27px;
+
+}
+
+
+.header-right {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: var(--green);
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-right: 6px;
+
+    box-shadow:
+        0 0 10px var(--green);
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding: 85px 10px 65px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border:
+
+        1px solid #164e63;
+
+    border-radius: 20px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(38px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--blue);
+
+    text-shadow:
+        0 0 30px rgba(56, 189, 248, .3);
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border: none;
+
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.primary-btn {
+
+    background:
+        linear-gradient(135deg,
+            var(--blue2),
+            #0284c7);
+
+    color: white;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, .25);
+
+}
+
+
+.secondary-btn {
+
+    background:
+        #1e293b;
+
+    color: var(--text);
+
+}
+
+
+.primary-btn:hover,
+.secondary-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-section {
+
+    margin-bottom: 40px;
+
+}
+
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.progress-track {
+
+    height: 6px;
+
+    background:
+        #1e293b;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    width: 11%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            #06b6d4,
+            #3b82f6);
+
+    transition:
+        width .6s ease;
+
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-title small,
+.visual-header small {
+
+    color: var(--blue);
+
+    letter-spacing: 1px;
+
+    font-size: 11px;
+
+}
+
+
+.section-title h2,
+.visual-header h2 {
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.legend {
+
+    display: flex;
+
+    gap: 18px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.legend i {
+
+    width: 9px;
+
+    height: 9px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+
+}
+
+
+.legend-active {
+
+    background: var(--blue);
+
+}
+
+
+.legend-completed {
+
+    background: var(--green);
+
+}
+
+
+/* =====================================================
+   BOOT FLOW
+===================================================== */
+
+.boot-flow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.boot-block {
+
+    width: 125px;
+
+    min-height: 100px;
+
+    background:
+        rgba(15, 23, 42, .8);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.boot-block:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--blue);
+
+}
+
+
+.boot-block.active {
+
+    border-color:
+        var(--blue);
+
+    background:
+        #082f49;
+
+    transform:
+        scale(1.07);
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, .4);
+
+}
+
+
+.boot-block.completed {
+
+    border-color:
+        var(--green);
+
+    background:
+        #052e16;
+
+}
+
+
+.boot-icon {
+
+    font-size: 28px;
+
+}
+
+
+.boot-name {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.flow-arrow {
+
+    font-size: 20px;
+
+    color:
+        #475569;
+
+}
+
+
+/* =====================================================
+   VISUALIZATION
+===================================================== */
+
+.visualization-section {
+
+    margin-top: 65px;
+
+}
+
+
+.visual-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.animation-status {
+
+    padding:
+        6px 12px;
+
+    border-radius:
+        20px;
+
+    background:
+        #0f172a;
+
+    border:
+        1px solid var(--border);
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+
+}
+
+
+.visual-area {
+
+    height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border:
+        1px solid var(--border);
+
+    background:
+
+        linear-gradient(rgba(15, 23, 42, .8),
+            rgba(2, 6, 23, .95));
+
+}
+
+
+/* =====================================================
+   MACHINE
+===================================================== */
+
+.machine {
+
+    position: absolute;
+
+    top: 105px;
+
+    width: 170px;
+
+    height: 115px;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 15px;
+
+    background:
+        #0f172a;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition:
+        .5s ease;
+
+}
+
+
+.machine-left {
+
+    left: 8%;
+
+}
+
+
+.machine-right {
+
+    right: 8%;
+
+}
+
+
+.machine-icon {
+
+    font-size: 34px;
+
+}
+
+
+.machine-name {
+
+    margin-top: 8px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+}
+
+
+.machine.active {
+
+    border-color:
+        var(--blue);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, .35);
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =====================================================
+   CONNECTION
+===================================================== */
+
+.connection {
+
+    position: absolute;
+
+    top: 162px;
+
+    left: 23%;
+
+    right: 23%;
+
+    height: 2px;
+
+    background:
+        #334155;
+
+}
+
+
+/* =====================================================
+   PACKET
+===================================================== */
+
+.data-packet {
+
+    position: absolute;
+
+    top: 145px;
+
+    left: 20%;
+
+    opacity: 0;
+
+    padding:
+        9px 14px;
+
+    border-radius:
+        8px;
+
+    background:
+        #2563eb;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.data-packet.animate {
+
+    animation:
+        packetMove 2s ease-in-out;
+
+}
+
+
+@keyframes packetMove {
+
+    0% {
+
+        left: 20%;
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    80% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        left: 76%;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   VISUAL MESSAGE
+===================================================== */
+
+.visual-message {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+}
+
+
+/* =====================================================
+   INFORMATION GRID
+===================================================== */
+
+.information-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:
+        25px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.explanation-card,
+.terminal-card {
+
+    background:
+        rgba(15, 23, 42, .85);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    padding:
+        28px;
+
+}
+
+
+.card-label {
+
+    color:
+        var(--blue);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.explanation-card h2 {
+
+    margin:
+        10px 0 15px;
+
+}
+
+
+.explanation-card>p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+
+}
+
+
+.what-box {
+
+    margin-top:
+        25px;
+
+    padding:
+        18px;
+
+    border-radius:
+        12px;
+
+    background:
+        #020617;
+
+    border-left:
+        3px solid var(--blue);
+
+}
+
+
+.what-title {
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.what-box p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =====================================================
+   KEYWORDS
+===================================================== */
+
+.keywords-section {
+
+    margin-top:
+        25px;
+
+}
+
+
+.keywords-title {
+
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.keyword {
+
+    display:
+        inline-block;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        20px;
+
+    background:
+        #1e293b;
+
+    border:
+        1px solid #334155;
+
+    color:
+        #bae6fd;
+
+    font-size:
+        12px;
+
+    margin:
+        4px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.keyword:hover {
+
+    background:
+        #164e63;
+
+}
+
+
+/* =====================================================
+   TERMINAL
+===================================================== */
+
+.terminal-card {
+
+    padding:
+        0;
+
+    overflow:
+        hidden;
+
+}
+
+
+.terminal-header {
+
+    padding:
+        13px 18px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+}
+
+
+.terminal-dots span {
+
+    width:
+        9px;
+
+    height:
+        9px;
+
+    display:
+        inline-block;
+
+    border-radius:
+        50%;
+
+    background:
+        #475569;
+
+    margin-right:
+        4px;
+
+}
+
+
+.terminal {
+
+    padding:
+        20px;
+
+    height:
+        280px;
+
+    overflow:
+        hidden;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        13px;
+
+    color:
+        #86efac;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.controls {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    margin:
+        30px 0 70px;
+
+}
+
+
+.control-btn {
+
+    padding:
+        12px 22px;
+
+    border-radius:
+        10px;
+
+    background:
+        #1e293b;
+
+    color:
+        white;
+
+    font-weight:
+        600;
+
+}
+
+
+.control-btn:hover {
+
+    background:
+        #334155;
+
+}
+
+
+.control-btn.next {
+
+    background:
+        var(--blue2);
+
+}
+
+
+.control-btn.auto {
+
+    background:
+        #065f46;
+
+}
+
+
+/* =====================================================
+   COMPLETE
+===================================================== */
+
+.complete-screen {
+
+    text-align:
+        center;
+
+    padding:
+        55px;
+
+    border:
+        2px solid var(--green);
+
+    border-radius:
+        20px;
+
+    background:
+        #052e16;
+
+    margin-bottom:
+        80px;
+
+}
+
+
+.complete-icon {
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    margin:
+        auto auto 20px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    color:
+        #052e16;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        35px;
+
+    font-weight:
+        bold;
+
+}
+
+
+.complete-screen h2 {
+
+    color:
+        #86efac;
+
+    font-size:
+        30px;
+
+}
+
+
+.complete-screen p {
+
+    color:
+        #bbf7d0;
+
+    margin:
+        12px 0 25px;
+
+}
+
+
+.login-terminal {
+
+    background:
+        #020617;
+
+    padding:
+        18px;
+
+    border-radius:
+        10px;
+
+    font-family:
+        monospace;
+
+    margin:
+        20px auto;
+
+    max-width:
+        500px;
+
+    text-align:
+        left;
+
+}
+
+
+.cursor {
+
+    display:
+        inline-block;
+
+    width:
+        8px;
+
+    height:
+        16px;
+
+    background:
+        #22c55e;
+
+    animation:
+        blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        100;
+
+}
+
+
+.modal-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(0, 0, 0, .75);
+
+    backdrop-filter:
+        blur(5px);
+
+}
+
+
+.modal-box {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        min(450px, 90%);
+
+    padding:
+        30px;
+
+    background:
+        #0f172a;
+
+    border:
+        1px solid var(--blue);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 0 50px rgba(0, 0, 0, .6);
+
+}
+
+
+.modal-icon {
+
+    font-size:
+        30px;
+
+}
+
+
+.modal-box h2 {
+
+    margin:
+        10px 0;
+
+    color:
+        var(--blue);
+
+}
+
+
+.modal-box p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+
+}
+
+
+.close-modal {
+
+    position:
+        absolute;
+
+    top:
+        15px;
+
+    right:
+        18px;
+
+    background:
+        none;
+
+    color:
+        var(--muted);
+
+    font-size:
+        25px;
+
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+
+    display:
+        none !important;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:800px) {
+
+    .information-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .section-title {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+    }
+
+    .machine {
+
+        width:
+            120px;
+
+    }
+
+}
